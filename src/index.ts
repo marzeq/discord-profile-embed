@@ -8,6 +8,11 @@ import nodeHtmlToImage from "node-html-to-image"
 
 dotenv.config()
 
+if (!process.env.MONGODB_URI) {
+	console.error("env vars are not set")
+	process.exit(1)
+}
+
 const PORT = process.env.PORT || 8080,
 	AUTH = {
 		clientId: process.env.CLIENT_ID!,
