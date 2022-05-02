@@ -6,7 +6,7 @@ Generate Discord profile images on the fly
 
 - Go to https://profileembed.herokuapp.com/auth
 - Login with your Discord account
-- Go to <a href="https://profileembed.herokuapp.com/?userid=<your-discord-userid>">https://profileembed.herokuapp.com/?userid=\<your-discord-userid></a>
+- Go to https://profileembed.herokuapp.com/?userid=[your-discord-userid]
 - Done!
 
 #### This can also be self-hosted.
