@@ -166,7 +166,10 @@ app.get("/", async (req, res) => {
 			</style>
 		`,
 		transparent: true,
-		selector: "#body"
+		selector: "#body",
+		puppeteerArgs: {
+			args: ["--no-sandbox", "--disable-setuid-sandbox"]
+		}
 	})
 
 	res.setHeader("Content-Type", "image/png")
