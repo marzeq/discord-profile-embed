@@ -235,21 +235,6 @@ const _nulllog = (err: any) => {
 	console.error(err)
 	return null
 }
-const _val =
-	<T>(x: T) =>
-	(_: any) =>
-		x
-const _vallog =
-	<T>(x: T) =>
-	(err: any) => {
-		console.error(err)
-		return x
-	}
-
-const querify = (data: { [key: string]: any }) =>
-	Object.keys(data)
-		.map(key => `${key}=${String(data[key])}`)
-		.join("&")
 
 interface User {
 	id: string
