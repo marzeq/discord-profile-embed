@@ -13,4 +13,4 @@ Generate Discord profile images on the fly
 
 ## Example image:
 
-![Example](https://profileembed.herokuapp.com/?userid=500669086947344384)
+![Example](https://profileembed.herokuapp.com?userid=500669086947344384)
