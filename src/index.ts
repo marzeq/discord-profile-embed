@@ -1,5 +1,4 @@
 import express from "express"
-import htmlToImage from "node-html-to-image"
 import dotenv from "dotenv"
 import open from "open"
 import OAuth from "discord-oauth2"
