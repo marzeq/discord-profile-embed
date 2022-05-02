@@ -102,7 +102,7 @@ app.get("/", async (req, res) => {
 		if (userflags & (1 << 18)) flags.push("Discord_certified_moderator")
 	}
 
-	if (user.premium_type !== 0) flags.push("nitro")
+	if (user.premium_type !== undefined && user.premium_type !== 0) flags.push("nitro")
 
 	const buffer = await nodeHtmlToImage({
 		html: html`
