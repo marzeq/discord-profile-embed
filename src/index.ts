@@ -226,7 +226,7 @@ mongo.connect().then(() => {
 	app.listen(PORT, async () => {
 		console.log("Server is running.")
 		console.log(`http://localhost:${PORT}`)
-		open(`http://localhost:${PORT}`)
+		if (process.env.NODE_ENV !== "production") open(`http://localhost:${PORT}`)
 	})
 })
 
