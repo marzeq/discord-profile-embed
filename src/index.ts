@@ -133,6 +133,8 @@ app.get("/", async (req, res) => {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					padding: 20px;
+					border-radius: 20px;
 				}
 
 				.main {
@@ -142,7 +144,7 @@ app.get("/", async (req, res) => {
 
 				.avatar {
 					border-radius: 50%;
-					margin-right: 10px;
+					margin-right: 20px;
 				}
 
 				.username {
