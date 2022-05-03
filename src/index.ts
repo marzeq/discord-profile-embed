@@ -102,7 +102,7 @@ app.get("/", async (req, res) => {
 		if (userflags & (1 << 18)) flags.push("Discord_certified_moderator")
 	}
 
-	if (user.premium_type !== undefined && user.premium_type !== 0) flags.push("nitro")
+	if (user.premium_type) flags.push("nitro")
 
 	const buffer = await nodeHtmlToImage({
 		html: html`
@@ -218,10 +218,7 @@ app.get("/auth", async (req, res) => {
 
 	coll.updateOne({ id: user.id }, { $set: { id: user.id, ...token, expires_at: token.expires_in * 1000 + Date.now() } })
 
-	res.send(html`
-		<h1>You have been authenticated as ${user.username}#${user.discriminator}</h1>
-		<p>You can now close this tab</p>
-	`)
+	res.redirect(`/?userid=${user.id}`)
 })
 
 mongo.connect().then(() => {
